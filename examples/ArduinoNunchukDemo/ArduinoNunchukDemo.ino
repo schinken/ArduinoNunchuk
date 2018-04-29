@@ -15,7 +15,7 @@ ArduinoNunchuk nunchuk;
 
 void setup() {
   Serial.begin(115200);
-  nunchuk.init();
+  nunchuk.begin();
 }
 
 void loop() {

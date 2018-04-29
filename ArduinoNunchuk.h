@@ -28,7 +28,7 @@ class ArduinoNunchuk {
 		bool zButton;
 		bool cButton;
 
-		void init();
+		void begin();
 		bool update(); // Returns true if update() was successful
 
 	private:

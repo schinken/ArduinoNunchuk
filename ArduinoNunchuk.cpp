@@ -20,7 +20,7 @@
 
 #define ADDRESS 0x52
 
-void ArduinoNunchuk::init() {
+void ArduinoNunchuk::begin() {
 	Wire.begin();
 
 	ArduinoNunchuk::_sendByte(0x55, 0xF0);
