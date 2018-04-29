@@ -5,23 +5,20 @@
  *
  * Project URL: http://www.gabrielbianconi.com/projects/arduinonunchuk/
  *
+ * Modified by Iscle on 29/04/2018
  */
 
 #include <Wire.h>
 #include <ArduinoNunchuk.h>
 
-#define BAUDRATE 19200
+ArduinoNunchuk nunchuk;
 
-ArduinoNunchuk nunchuk = ArduinoNunchuk();
-
-void setup()
-{
-  Serial.begin(BAUDRATE);
+void setup() {
+  Serial.begin(115200);
   nunchuk.init();
 }
 
-void loop()
-{
+void loop() {
   nunchuk.update();
 
   Serial.print(nunchuk.analogX, DEC);
